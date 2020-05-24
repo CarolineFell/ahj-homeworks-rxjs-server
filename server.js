@@ -52,8 +52,8 @@ router.get('/messages/unread', async (ctx, next) => {
   let randomId;
   let randomEmail;
   let randomName;
-  let randomBody;
-  let randomReceived;
+  let randomParagraph;
+  let randomRecent;
 
   const obgMessages = {
     status: 'ok',
@@ -67,16 +67,16 @@ router.get('/messages/unread', async (ctx, next) => {
     randomId = uuid.v4();
     randomEmail = faker.internet.email();
     randomName = faker.internet.userName();
-    randomBody = faker.lorem.paragraph();
-    randomReceived = faker.date.recent();
+    randomParagraph = faker.lorem.paragraph();
+    randomRecent = faker.date.recent();
     
     obgMessages.messages.push(
       {
         id: randomId,
         from: randomEmail,
         subject: `Hello from ${randomName}`,
-        body: randomBody,
-        received: randomReceived,
+        body: randomParagraph,
+        received: randomRecent,
       }
     );
   }
