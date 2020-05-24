@@ -5,7 +5,7 @@ const koaBody = require('koa-body');
 const uuid = require('uuid');
 const faker = require('faker');
 const app = new Koa();
-// CORS
+
 app.use(async (ctx, next) => {
   const origin = ctx.request.get('Origin');
   if (!origin) {
@@ -51,7 +51,7 @@ const server = http.createServer(app.callback())
 router.get('/messages/unread', async (ctx, next) => {
   let randomId;
   let randomEmail;
-  let randomUserName;
+  let randomName;
   let randomBody;
   let randomReceived;
 
@@ -66,7 +66,7 @@ router.get('/messages/unread', async (ctx, next) => {
   for (let i = 0; i < randomNewMessage; i += 1) {
     randomId = uuid.v4();
     randomEmail = faker.internet.email();
-    randomUserName = faker.internet.userName();
+    randomName = faker.internet.userName();
     randomBody = faker.lorem.paragraph();
     randomReceived = faker.date.recent();
     
@@ -74,7 +74,7 @@ router.get('/messages/unread', async (ctx, next) => {
       {
         id: randomId,
         from: randomEmail,
-        subject: `Hello from ${randomUserName}`,
+        subject: `Hello from ${randomName}`,
         body: randomBody,
         received: randomReceived,
       }

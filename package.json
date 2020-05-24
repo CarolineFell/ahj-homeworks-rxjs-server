@@ -28,13 +28,13 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CarolineFell/ahj-homeworks-sse-ws-server.git"
+    "url": "git+https://github.com/CarolineFell/ahj-homeworks-rxjs-server.git"
   },
   "keywords": [
     "rxjs"
   ],
   "bugs": {
-    "url": "https://github.com/CarolineFell/ahj-homeworks-sse-ws-server/issues"
+    "url": "https://github.com/CarolineFell/ahj-homeworks-rxjs-server/issues"
   },
-  "homepage": "https://github.com/CarolineFell/ahj-homeworks-sse-ws-server#readme"
+  "homepage": "https://github.com/CarolineFell/ahj-homeworks-rxjs-server#readme"
 }
